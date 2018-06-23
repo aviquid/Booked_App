@@ -1,0 +1,94 @@
+{
+  "headerOptions": [
+    {
+      "label": "Home",
+      "multipleOption": false,
+      "url": "/"
+    },
+    {
+      "label": "Categories",
+      "url": "/categories",
+      "multipleOption": true,
+      "options": [
+        {
+          "label": "Notes",
+          "url": "/notes"
+        },
+        {
+          "label": "Text Books for VTU",
+          "url": "/text-books-for-vtu"
+        },
+          {
+          "label": "Text Books for Deemed Universities",
+          "url": "/text-books-for-deemed-universities"
+        },
+          {
+          "label": "Exam Scanners",
+          "url": "/exam-scanners"
+        },
+          {
+          "label": "Competative Exams",
+          "url": "/competative-exams"
+        }
+      ]
+    },
+      {
+      "label": "Wishlist",
+      "multipleOption": false,
+      "url": "/wishlist"
+    },
+      {
+      "label": "Cart",
+      "multipleOption": false,
+      "url": "/cart"
+    }
+      
+  ],
+  "categories": [
+    {
+      "category": "Xerox Notes",
+      "products": [
+        {
+          "name": "Moong (1 kg)",
+          "productId": "dev123456",
+          "discountedPrice": "1.50",
+          "originalPrice": "2.00",
+          "offerMsg": "Buy this for x and get y free"
+        },
+        {
+          "name": "Moong (1 kg)",
+          "productId": "dev123457",
+          "discountedPrice": "1.50",
+          "originalPrice": "2.00",
+          "offerMsg": "Buy this for x and get y free"
+        },
+        {
+          "name": "Moong (1 kg)",
+          "productId": "dev123458",
+          "discountedPrice": "1.50",
+          "originalPrice": "2.00",
+          "offerMsg": "Buy this for x and get y free"
+        }
+      ]
+    }
+  ],
+  "footerOptions": {
+    "categories": [
+      {
+        "mainLabel": "About Us",
+        "hasOptions": false,
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, placeat. Totam tenetur tempore, natus accusamus quia facere expedita nemo eum, itaque explicabo aliquam praesentium, illo obcaecati nesciunt inventore voluptates quis."
+      },
+      {
+        "mainLabel": "Menu",
+        "hasOptions": true,
+        "options": [
+          {
+            "label": "Home",
+            "url": "/"
+          }
+        ]
+      }
+    ]
+  }
+}

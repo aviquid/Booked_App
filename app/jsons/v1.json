@@ -1,0 +1,60 @@
+{
+  "headerOptions": [
+    {
+      "label": "Home",
+      "multipleOption": false,
+      "url": "/"
+    },
+    {
+      "label": "Kitchen",
+      "url": "/kitchen",
+      "multipleOption": true,
+      "options": [
+        {
+          "label": "Water and Beverages",
+          "url": "/water-and-beverages"
+        },
+        {
+          "label": "Fruits",
+          "url": "/fruits"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "category": "Xerox Notes",
+      "products": [
+        {
+          "name": "Moong (1 kg)",
+          "productId": "dev123456",
+          "pricing": {
+            "discountedPrice": "1.50",
+            "originalPrice": "2.00"
+          },
+          "hasOffer": true,
+          "offerMsg": "Buy this for x and get y free"
+        }
+      ]
+    }
+  ],
+  "footerSection": {
+    "categories": [
+      {
+        "mainLabel": "About Us",
+        "hasOptions": false,
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, placeat. Totam tenetur tempore, natus accusamus quia facere expedita nemo eum, itaque explicabo aliquam praesentium, illo obcaecati nesciunt inventore voluptates quis."
+      },
+      {
+        "mainLabel": "Menu",
+        "hasOptions": true,
+        "options": [
+          {
+            "label": "Home",
+            "url": "/"
+          }
+        ]
+      }
+    ]
+  }
+}
