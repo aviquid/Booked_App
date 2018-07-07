@@ -15,6 +15,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'src/HomePage';
+import CategoryPage from 'src/CategoryPage';
 import NotFoundPage from 'src/NotFoundPage/Loadable';
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/categories" component={CategoryPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
