@@ -5,11 +5,13 @@
 import React from 'react';
 
 /* eslint-disable react/prefer-stateless-function */
-export default class HomePage extends React.PureComponent {
+export default class CategoryPage extends React.PureComponent {
   render() {
+    const { match : { params : { subComponent } } } = this.props;
     return (
     	<section>
-            This is the dummy categories content to show routing.
+        <p>This is to show dynamic routing.</p>
+        <p>Current Route : {subComponent}</p>
 	    </section>
     );
   }
