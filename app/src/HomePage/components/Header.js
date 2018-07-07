@@ -12,7 +12,7 @@ export default function Header({options}) {
 	      Booked up!
 	    </h1>
 	    <ul>
-	    	{options.map((option, index) => 
+	    	{options.map((option) => 
 	    		<li key={option.label}>
 	    			<a href={option.url}>{option.label}</a>
 	    		</li>)}

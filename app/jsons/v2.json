@@ -75,9 +75,8 @@
   "footerOptions": {
     "categories": [
       {
-        "mainLabel": "About Us",
-        "hasOptions": false,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, placeat. Totam tenetur tempore, natus accusamus quia facere expedita nemo eum, itaque explicabo aliquam praesentium, illo obcaecati nesciunt inventore voluptates quis."
+        "label": "About Us",
+        "url": "/about-us"
       },
       {
         "mainLabel": "Menu",

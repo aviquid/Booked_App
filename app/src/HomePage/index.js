@@ -14,6 +14,7 @@ import hpJson from 'jsons/v2.json';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import TileSection from './components/TileSection';
+import UnderConstruction from './components/UnderConstruction';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
@@ -21,7 +22,8 @@ export default class HomePage extends React.PureComponent {
     return (
     	<section>
 	      <Header options={hpJson.headerOptions} />
-	      <TileSection products={hpJson.categories} />
+				<UnderConstruction />
+	      {/* <TileSection products={hpJson.categories} /> */}
 	      <Footer options={hpJson.footerOptions} />
 	    </section>
     );

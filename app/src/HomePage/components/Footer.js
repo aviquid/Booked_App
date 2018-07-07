@@ -12,9 +12,8 @@ export default function Footer({options}) {
 	  	<ul>
 		    {options.categories.map((option, index) => 
 		    	!option.hasOptions ?
-		    	<li key={option.mainLabel}>
-		    		<h3>{option.mainLabel}</h3>
-		    		<p>{option.content}</p>
+		    	<li key={option.label}>
+		    		<a href={option.url}>{option.label}</a>
 		    	</li> : 
 		    	<li key={option.mainLabel}>
 		    		<h3>{option.mainLabel}</h3>
