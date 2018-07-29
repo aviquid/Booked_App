@@ -23,13 +23,13 @@ const Section = styled.section`
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-    	<Section>
+      <Section>
         <div className="input-group">
-          <Search type="text" className="form-control" placeholder="Search"/>
+          <Search type="text" className="form-control" placeholder="Search" />
         </div>
         <Slider />
-	      <TileSection products={hpJson.categories} />
-	    </Section>
+        <TileSection products={hpJson.categories} />
+      </Section>
     );
   }
 }
