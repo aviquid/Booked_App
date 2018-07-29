@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import UnderConstructionImage from 'images/under-construction.jpg';
+import UnderConstructionImage from 'assets/images/under-construction.jpg';
 import styled from 'styled-components';
 
 const OuterDiv = styled.div`

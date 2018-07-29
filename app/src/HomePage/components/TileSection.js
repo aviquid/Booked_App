@@ -6,6 +6,10 @@ import React from 'react';
 import { FlexDiv } from 'src/Common/StyledComponents';
 import styled from 'styled-components';
 
+const OuterDiv = styled.div`
+	margin: 40px 20px 20px;
+`;
+
 const ProductDiv = styled.div`
 	border: 1px solid #ccc;
 	margin: 20px;
@@ -17,7 +21,7 @@ export default class TileSection extends React.PureComponent {
   render() {
   	const { products } = this.props; 
     return (
-    	<div>
+    	<OuterDiv>
 	      {products.map((product, index) => 
 	      	<section key={product.category} >
 	      		<h2>{product.category}</h2>
@@ -30,7 +34,7 @@ export default class TileSection extends React.PureComponent {
 	      			</ProductDiv>)}
 	      		</FlexDiv>
 	      	</section>)}
-	    </div>
+	    </OuterDiv>
     );
   }
 }

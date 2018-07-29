@@ -14,18 +14,24 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import Header from 'src/Common/Header';
 import HomePage from 'src/HomePage';
 import CategoryPage from 'src/CategoryPage';
 import NotFoundPage from 'src/NotFoundPage/Loadable';
+import Footer from 'src/Common/Footer';
+import 'assets/css/bootstrap.min.css';
+import 'assets/css/bootstrap-theme.min.css';
 
 export default function App() {
   return (
     <div>
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/:subComponent" component={CategoryPage} />
         <Route component={NotFoundPage} />
       </Switch>
+      <Footer />
     </div>
   );
 }

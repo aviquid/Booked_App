@@ -10,22 +10,26 @@
  */
 
 import React from 'react';
+import styled from 'styled-components';
 import hpJson from 'jsons/v2.json';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Search from './components/Search';
 import TileSection from './components/TileSection';
-import UnderConstruction from './components/UnderConstruction';
+import Slider from './components/Slider';
 
+const Section = styled.section`
+  margin-top: 72px;
+`;
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-    	<section>
-	      <Header options={hpJson.headerOptions} />
-				<UnderConstruction />
-	      {/* <TileSection products={hpJson.categories} /> */}
-	      <Footer options={hpJson.footerOptions} />
-	    </section>
+    	<Section>
+        <div className="input-group">
+          <Search type="text" className="form-control" placeholder="Search"/>
+        </div>
+        <Slider />
+	      <TileSection products={hpJson.categories} />
+	    </Section>
     );
   }
 }
