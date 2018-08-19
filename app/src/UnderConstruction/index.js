@@ -10,14 +10,28 @@
  */
 
 import React from 'react';
-
+import axios from 'axios';
 import PlayStore from 'assets/images/playStore.gif';
 
 import { FlexCol, FlexWrap, SBAC, NotifyDiv, Input, NotifyBtn } from './styled';
 
+const emailSubmitUrl = "http://ec2-18-217-146-71.us-east-2.compute.amazonaws.com/website_emailid.php";
 const Form = SBAC.withComponent('form');
 /* eslint-disable react/prefer-stateless-function */
 export default class UnderConstruction extends React.PureComponent {
+  handleEmailSubmit(e) {
+    e.preventDefault();
+    axios({
+      method: 'POST',
+      url: emailSubmitUrl,
+      data: {
+        email: e.target.value
+      }
+    }).then(response => response.data)
+    .catch(error => {
+      throw error;
+    });
+  }
   render() {
     return (
     <FlexCol className="size1 ">
@@ -35,7 +49,7 @@ export default class UnderConstruction extends React.PureComponent {
           <NotifyDiv>
             <Input placeholder="Enter e-mail address."/>
           </NotifyDiv>
-          <NotifyBtn>
+          <NotifyBtn onClick={this.handleEmailSubmit} >
             Notify me!
           </NotifyBtn>
         </Form>
