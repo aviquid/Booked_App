@@ -17,21 +17,25 @@ import { Switch, Route } from 'react-router-dom';
 import Header from 'src/Common/Header';
 import HomePage from 'src/HomePage';
 import CategoryPage from 'src/CategoryPage';
+import UnderConstruction from 'src/UnderConstruction';
 import NotFoundPage from 'src/NotFoundPage/Loadable';
 import Footer from 'src/Common/Footer';
 import 'assets/css/bootstrap.min.css';
 import 'assets/css/bootstrap-theme.min.css';
+import 'assets/css/main.css';
+import 'assets/css/util.css';
 
 export default function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/uc" component={UnderConstruction} />
         <Route exact path="/:subComponent" component={CategoryPage} />
         <Route component={NotFoundPage} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
