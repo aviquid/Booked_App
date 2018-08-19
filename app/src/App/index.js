@@ -30,10 +30,10 @@ export default function App() {
     <div>
       {/* <Header /> */}
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/uc" component={UnderConstruction} />
-        <Route exact path="/:subComponent" component={CategoryPage} />
-        <Route component={NotFoundPage} />
+        {/* <Route exact path="/" component={HomePage} /> */}
+        <Route exact path="*" component={UnderConstruction} />
+        {/* <Route exact path="/:subComponent" component={CategoryPage} /> */}
+        {/* <Route component={NotFoundPage} /> */}
       </Switch>
       {/* <Footer /> */}
     </div>
