@@ -45,7 +45,9 @@ export const FlexCol = FlexDiv.extend`
 `;
 
 export const NotifyDiv = styled.div`
-    width: 500px;
+    @media (min-width: 768px) {
+        width: 500px;
+    }
     max-width: calc(100% - 10px);
     position: relative;
     background-color: transparent;

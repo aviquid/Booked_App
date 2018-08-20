@@ -17,7 +17,12 @@ import { FlexCol, FlexWrap, SBAC, NotifyDiv, Input, NotifyBtn } from './styled';
 
 const emailSubmitUrl =
   'http://ec2-18-217-146-71.us-east-2.compute.amazonaws.com/website_emailid.php';
-const Form = SBAC.withComponent('form');
+const Form = SBAC.withComponent('form').extend`
+  @media (max-width: 767px) {
+    height: 120px;
+    flex-flow: column nowrap;
+  }
+`;
 /* eslint-disable react/prefer-stateless-function */
 export default class UnderConstruction extends React.PureComponent {
   handleEmailSubmit(e) {
