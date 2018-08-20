@@ -66,7 +66,8 @@ export default class UnderConstruction extends React.PureComponent {
               onChange={this.handleInputChange}
               value={this.state.input} />
             </NotifyDiv>
-            <NotifyBtn onClick={this.handleEmailSubmit}>Notify me!</NotifyBtn>
+            <NotifyBtn type="submit"
+            onClick={this.handleEmailSubmit}>Notify me!</NotifyBtn>
           </Form>
         </div>
 
