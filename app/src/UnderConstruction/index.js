@@ -25,19 +25,28 @@ const Form = SBAC.withComponent('form').extend`
 `;
 /* eslint-disable react/prefer-stateless-function */
 export default class UnderConstruction extends React.PureComponent {
-  handleEmailSubmit(e) {
+  state = {
+    input: ""
+  }
+
+  handleInputChange = (e) => {
+    this.setState({
+      input: e.target.value
+    })
+  }
+  handleEmailSubmit = (e) => {
     e.preventDefault();
     axios({
       method: 'POST',
       url: emailSubmitUrl,
       data: {
-        email: e.target.value,
+        email: this.state.input,
       },
     })
-      .then(response => response.data)
-      .catch(error => {
-        throw error;
-      });
+    .then(response => response.data)
+    .catch(error => {
+      throw error;
+    });
   }
   render() {
     return (
@@ -53,7 +62,9 @@ export default class UnderConstruction extends React.PureComponent {
           <h3 className="l1-txt1 txt-center p-b-40 respon1">Coming Soon</h3>
           <Form>
             <NotifyDiv>
-              <Input placeholder="Enter e-mail address." />
+              <Input placeholder="Enter e-mail address." 
+              onChange={this.handleInputChange}
+              value={this.state.input} />
             </NotifyDiv>
             <NotifyBtn onClick={this.handleEmailSubmit}>Notify me!</NotifyBtn>
           </Form>
